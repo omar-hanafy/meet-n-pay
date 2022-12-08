@@ -41,14 +41,18 @@ class _MyAppState extends State<MyApp> {
     setupSDKSession();
   }
 
+  // Secret API Key sk_test_gano8ZSUGvYEN1Dw7XtQAW2O
+  // Publishable API Key pk_test_JAyNRX7a8IepLxSrgPtdWGlV
+
   // configure app key and bundle-id (You must get those keys from tap)
   Future<void> configureApp() async {
     GoSellSdkFlutter.configureApp(
-      bundleId: Platform.isAndroid ? "ANDROID-PACKAGE-NAME" : "IOS-APP-ID",
+      bundleId: Platform.isAndroid ? "com.meetntrain" : "IOS-APP-ID",
       productionSecreteKey:
           Platform.isAndroid ? "Android-Live-KEY" : "iOS-Live-KEY",
-      sandBoxsecretKey:
-          Platform.isAndroid ? "Android-SANDBOX-KEY" : "iOS-SANDBOX-KEY",
+      sandBoxsecretKey: Platform.isAndroid
+          ? "sk_test_gano8ZSUGvYEN1Dw7XtQAW2O"
+          : "iOS-SANDBOX-KEY",
       lang: "en",
     );
   }
